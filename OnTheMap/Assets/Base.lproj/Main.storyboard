@@ -118,7 +118,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a9C-G3-mcE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Vcl-E5-gCt"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="List View" id="Vcl-E5-gCt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNo-mf-tKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +134,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Y8V-bF-RKb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="oSY-RK-7Ek"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="Map view" id="oSY-RK-7Ek"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2A-Dg-Ok2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +161,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="List View" width="75" height="50"/>
         <image name="Logo" width="62" height="62"/>
+        <image name="Map view" width="75" height="50"/>
     </resources>
 </document>
