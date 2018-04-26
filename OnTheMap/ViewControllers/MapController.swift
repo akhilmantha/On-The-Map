@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MapController: UIViewController {
+    
+    @IBOutlet var mapView: MKMapView!
+    var studentsLocation : [studentLocation] = [StudentLocation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
