@@ -55,6 +55,9 @@
                                                 </state>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="ln9-ip-SXV"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,7 +69,7 @@
                                     <constraint firstItem="kZO-uV-V8j" firstAttribute="top" secondItem="eam-RY-Pmg" secondAttribute="bottom" constant="50" id="eQW-QS-UpL"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kea-3H-Buq" userLabel="Sign Up Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kea-3H-Buq" userLabel="Sign Up Button">
                                 <rect key="frame" x="35" y="414" width="250" height="30"/>
                                 <state key="normal" title="Don't have an account? Sign Up">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,8 +80,10 @@
                         <constraints>
                             <constraint firstItem="7v8-a3-TRP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="70a-Qy-9Et"/>
                             <constraint firstItem="7v8-a3-TRP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Kl-KG-h7C"/>
+                            <constraint firstItem="kZO-uV-V8j" firstAttribute="trailing" secondItem="Kea-3H-Buq" secondAttribute="trailing" id="Chf-nZ-7CD"/>
                             <constraint firstItem="7v8-a3-TRP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="otz-nr-R42"/>
                             <constraint firstItem="Kea-3H-Buq" firstAttribute="top" secondItem="7v8-a3-TRP" secondAttribute="bottom" constant="10" id="umO-Ch-XYX"/>
+                            <constraint firstItem="kZO-uV-V8j" firstAttribute="leading" secondItem="Kea-3H-Buq" secondAttribute="leading" id="zra-Ie-WFn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
