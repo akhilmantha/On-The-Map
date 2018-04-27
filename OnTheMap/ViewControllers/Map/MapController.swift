@@ -15,7 +15,9 @@ class MapController: UIViewController, refres {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        performUIUpdatesOnMain
+        performUIUpdatesOnMain{
+            self.refresh()
+        }
     }
 
 

@@ -14,6 +14,8 @@
 		6A433C43209076A8003EF463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A433C41209076A8003EF463 /* LaunchScreen.storyboard */; };
 		6AB30A0220939835009CE32F /* MapController+MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A0120939835009CE32F /* MapController+MapDelegate.swift */; };
 		6AB30A0420939AFC009CE32F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A0320939AFC009CE32F /* GCDBlackBox.swift */; };
+		6AB30A062093C55C009CE32F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A052093C55C009CE32F /* LoginViewController.swift */; };
+		6AB30A082093D0AB009CE32F /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A072093D0AB009CE32F /* HTTPStatusCodes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		6A433C44209076A8003EF463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AB30A0120939835009CE32F /* MapController+MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapController+MapDelegate.swift"; sourceTree = "<group>"; };
 		6AB30A0320939AFC009CE32F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		6AB30A052093C55C009CE32F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6AB30A072093D0AB009CE32F /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			children = (
 				6AD139322090F2D500D2D3F2 /* Map */,
 				6AD139332090F2E100D2D3F2 /* Table */,
+				6AB30A052093C55C009CE32F /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 		6AD139362090F3AC00D2D3F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6AB30A072093D0AB009CE32F /* HTTPStatusCodes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 				6AB30A0420939AFC009CE32F /* GCDBlackBox.swift in Sources */,
 				6AB30A0220939835009CE32F /* MapController+MapDelegate.swift in Sources */,
 				6A433C3B209076A7003EF463 /* MapController.swift in Sources */,
+				6AB30A062093C55C009CE32F /* LoginViewController.swift in Sources */,
+				6AB30A082093D0AB009CE32F /* HTTPStatusCodes.swift in Sources */,
 				6A433C39209076A7003EF463 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
