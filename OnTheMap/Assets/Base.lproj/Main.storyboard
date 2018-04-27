@@ -212,7 +212,6 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="4yd-wR-VFv"/>
                                             <constraint firstAttribute="width" constant="250" id="UGV-5g-0Kv"/>
                                         </constraints>
                                     </stackView>
