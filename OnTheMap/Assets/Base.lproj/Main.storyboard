@@ -172,13 +172,26 @@
                     <view key="view" contentMode="scaleToFill" id="so2-Ch-Zn6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-1Y-T4F">
+                                <rect key="frame" x="0.0" y="84" width="320" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="World" translatesAutoresizingMaskIntoConstraints="NO" id="HZy-p6-lDg">
+                                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1c0-wr-5NZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ke4-Fi-K58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="845"/>
+            <point key="canvasLocation" x="1642.5" y="844.0140845070423"/>
         </scene>
         <!--Map Controller-->
         <scene sceneID="ri5-LA-lWl">
@@ -234,5 +247,6 @@
         <image name="Logo" width="62" height="62"/>
         <image name="Map view" width="75" height="50"/>
         <image name="Pin" width="24" height="24"/>
+        <image name="World" width="52" height="67"/>
     </resources>
 </document>
