@@ -165,10 +165,25 @@
             </objects>
             <point key="canvasLocation" x="2523.75" y="469.01408450704224"/>
         </scene>
-        <!--Tab Bar Item -->
+        <!--Add Location-->
+        <scene sceneID="2pe-wW-3JS">
+            <objects>
+                <viewController title="Add Location" id="JoP-0p-klx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="so2-Ch-Zn6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1c0-wr-5NZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ke4-Fi-K58" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="845"/>
+        </scene>
+        <!--Map Controller-->
         <scene sceneID="ri5-LA-lWl">
             <objects>
-                <viewController id="lPn-rl-V0i" sceneMemberID="viewController">
+                <viewController title="Map Controller" id="lPn-rl-V0i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKg-Qk-1Gg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
