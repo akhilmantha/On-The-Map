@@ -239,6 +239,27 @@
             </objects>
             <point key="canvasLocation" x="1642.5" y="844.0140845070423"/>
         </scene>
+        <!--Add Location-->
+        <scene sceneID="hkl-2l-GCO">
+            <objects>
+                <viewController title="Add Location" id="ZCI-nK-8qL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XTD-DE-MK8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PIs-Gb-qZC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NfB-0Z-DGL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmI-Gg-gr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2523.75" y="1177.8169014084508"/>
+        </scene>
         <!--Map Controller-->
         <scene sceneID="ri5-LA-lWl">
             <objects>
