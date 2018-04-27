@@ -276,7 +276,7 @@
         <!--Map Controller-->
         <scene sceneID="ri5-LA-lWl">
             <objects>
-                <viewController title="Map Controller" id="lPn-rl-V0i" sceneMemberID="viewController">
+                <viewController title="Map Controller" id="lPn-rl-V0i" customClass="MapController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKg-Qk-1Gg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,6 +297,9 @@
                         <viewLayoutGuide key="safeArea" id="Y8V-bF-RKb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tab Bar Item " image="Map view" id="oSY-RK-7Ek"/>
+                    <connections>
+                        <outlet property="mapView" destination="aO0-he-EhX" id="gCu-We-CnC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2A-Dg-Ok2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
