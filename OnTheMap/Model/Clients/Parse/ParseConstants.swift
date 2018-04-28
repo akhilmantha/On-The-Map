@@ -49,6 +49,16 @@ extension ParseClient{
         static let StudentLocationSkipDefault = 400
         static let StudentLocationOrderDefault = "-updatedAt"
     }
+    //Mark: Parameter Keys
+    struct JSONBodyKeys {
+        static let UniqueKey = "uniqueKey"
+        static let FirstName = "firstName"
+        static let LastName = "lastName"
+        static let MapString = "mapString"
+        static let MediaURL = "mediaURL"
+        static let Latitude = "latitude"
+        static let Longitude = "longitude"
+        }
     
     //Mark: JSON Response Keys
     struct JSONResponseKeys {
