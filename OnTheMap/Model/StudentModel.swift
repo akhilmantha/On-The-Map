@@ -9,4 +9,4 @@
 import Foundation
 import UIKit
 
-var studentLocations : [studentLocation] = []
+var studentLocations : [StudentLocation] = []
