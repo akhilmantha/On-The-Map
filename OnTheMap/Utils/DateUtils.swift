@@ -18,13 +18,8 @@ extension DateFormatter{
     
     func dateFromApiString(_ dateString : String) -> Date? {
         self.dateFormat = DateFormatterConstants.DateFormatString
-        
-        
-        
+        self.timeZone = TimeZone(abbreviation: "UTC")
+        self.locale = Locale(identifier: "en_US_POSIX")
+        return self.date(from: dateString)
     }
-    
-    
-    
-    
-    
 }
