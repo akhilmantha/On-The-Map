@@ -48,7 +48,14 @@ class ParseClient : NSObject {
         //add request header
         let requestWithHeader =  addParseHeader(request: request)
         
-        
+        //Make a request
+        let task = session.dataTask(with: requestWithHeader) { (data, response, error) in
+            
+            guard let usefulData = getData(domain: "taskForGETMethod", request: requestWithHeader as URLRequest, data: data , response: response, error: error as NSError?, completionHandler: completionHandlerForGET) else {
+                return
+            }
+            convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForGET)
+        }
     }
     
 }
