@@ -18,4 +18,20 @@ class UdacityClient : NSObject {
     // authentication state
     var requestToken: String? = nil
     
+    // Session struct
+    struct UdacitySession {
+        let sessionId : String
+        let expirationDate : String
+        let userId: String
+        
+        //Mark: Initializers
+        init(session: String, expiration: String, user: String) {
+            sessionId = session
+            expirationDate = expiration
+            userId = user
+        }
+    }
+
+
+
 }
