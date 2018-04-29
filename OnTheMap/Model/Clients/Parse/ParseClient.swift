@@ -44,6 +44,11 @@ class ParseClient : NSObject {
         
         //Build the URL, configure the request
         let request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], withPathExtension: method, api: .Parse))
+        
+        //add request header
+        let requestWithHeader =  addParseHeader(request: request)
+        
+        
     }
     
 }
