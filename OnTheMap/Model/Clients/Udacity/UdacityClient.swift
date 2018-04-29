@@ -30,6 +30,14 @@ class UdacityClient : NSObject {
             expirationDate = expiration
             userId = user
         }
+        func isDateExpired() -> Bool {
+            let formatter = DateFormatter()
+            if let utcDate = formatter.dateFromApiString(expirationDate) {
+                return Date().compare(utcDate) == .orderedDescending
+            }
+            return true
+        }
+        
     }
 
 
