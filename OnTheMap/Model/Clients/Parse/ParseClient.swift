@@ -90,4 +90,11 @@ class ParseClient : NSObject {
         return task
     }
     
+    //Mark: Shared Instance
+    class func sharedInstance() -> ParseClient {
+        struct Singleton{
+            static var sharedInstance = ParseClient()
+        }
+        return Singleton.sharedInstance
+    }
 }
