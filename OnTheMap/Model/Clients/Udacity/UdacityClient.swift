@@ -45,13 +45,30 @@ class UdacityClient : NSObject {
     override  init(){
         super.init()
     }
-    func taskForPostMethod(_ mathod: String, parameters: [String: AnyObject], jsonBody: String,completionHandlerForPost: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
+    func taskForPostMethod(_ method: String, parameters: [String: AnyObject], jsonBody: Data,completionHandlerForPost: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
         
         //Build the URL & Configure the request
-        var request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], api: .Udacity))
+        var request = URLRequest(url: urlFromParameters(parameters, withPathExtension: method, api: .Udacity))
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField:"Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonBody
+        
+        //Make the request
+        let task = session.dataTask(with: request as URLRequest){ (data, response, error) in
+            
+        }
+        
+    }
+    
+    
+    //Get the data response and delete the first 5 characters
+    
+    func getUsefulData(domain: String, request:URLRequest?, data: Data?,response: URLResponse?, error: NSError?, completionaHandler: @escaping(_ result: AnyObject, error: NSError?) -> Void) -> Data{
+        
+        
+        
+        
         
     }
 
