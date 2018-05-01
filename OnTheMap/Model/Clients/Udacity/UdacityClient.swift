@@ -64,13 +64,29 @@ class UdacityClient : NSObject {
     
     //Get the data response and delete the first 5 characters
     
-    func getUsefulData(domain: String, request:URLRequest?, data: Data?,response: URLResponse?, error: NSError?, completionaHandler: @escaping(_ result: AnyObject, error: NSError?) -> Void) -> Data{
+    func getUsefulData(domain: String, request:URLRequest, data: Data?,response: URLResponse?, error: NSError?, completionaHandler: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> Data?{
         
+        let data = getData(domain: domain, request: request, data: data, response: response, error: error, completionHandler: completionaHandler)
         
-        
-        
-        
+        guard let responseData = data else {
+        return nil
     }
 
-
+        //parse and use the data (passes in the completion handler)
+        let range = Range(5..<responseData.count)
+        //subset of response data
+        let usefulData = responseData.subdata(in: range)
+        return usefulData
+}
+    
+    //shared instance
+    
+    class func sharedInstance() -> UdacityClient {
+        
+        struct singleton{
+            static var sharedInstance = UdacityClient()
+        }
+        return singleton.sharedInstance
+    }
+    
 }
