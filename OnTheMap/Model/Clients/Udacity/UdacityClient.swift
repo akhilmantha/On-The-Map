@@ -50,6 +50,8 @@ class UdacityClient : NSObject {
         //Build the URL & Configure the request
         var request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], api: .Udacity))
         request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField:"Accept")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
     }
 
