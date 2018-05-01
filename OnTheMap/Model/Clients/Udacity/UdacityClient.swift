@@ -57,7 +57,7 @@ class UdacityClient : NSObject {
         //Make the request
         let task = session.dataTask(with: request as URLRequest){ (data, response, error) in
             
-            guaard let usefulData = self.getUsefulData(domain: "taskForPostMethod", request: request as URLRequest, data: data, response: data, error: error as NSError?, completionaHandler: completionHandlerForPost) else {
+            guard let usefulData = self.getUsefulData(domain: "taskForPostMethod", request: request as URLRequest, data: data, response: response, error: error as NSError?, completionaHandler: completionHandlerForPost) else {
                 return
             }
             convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForPost)
