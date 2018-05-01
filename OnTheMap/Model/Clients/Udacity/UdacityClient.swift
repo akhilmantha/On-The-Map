@@ -48,7 +48,7 @@ class UdacityClient : NSObject {
     func taskForPostMethod(_ mathod: String, parameters: [String: AnyObject], jsonBody: String,completionHandlerForPost: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
         
         //Build the URL & Configure the request
-        let request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], api: .Udacity))
+        var request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], api: .Udacity))
         request.httpMethod = "POST"
         
     }
