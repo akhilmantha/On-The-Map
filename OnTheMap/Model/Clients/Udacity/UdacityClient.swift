@@ -38,6 +38,12 @@ class UdacityClient : NSObject {
             return true
         }
         
+        }
+    
+    //Mark: Initializers
+    
+    override  init(){
+        super.init()
     }
 
 
