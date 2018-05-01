@@ -49,6 +49,7 @@ class UdacityClient : NSObject {
         
         //Build the URL & Configure the request
         let request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], api: .Udacity))
+        request.httpMethod = "POST"
         
     }
 
