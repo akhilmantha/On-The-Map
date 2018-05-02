@@ -6,12 +6,12 @@
 //  Copyright © 2018 akhil mantha. All rights reserved.
 //
 
-import UIKit
+import MapKit
 
-class MapController: UIViewController, refres {
+class MapController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
-    var studentsLocation : [studentLocation] = [StudentLocation]()
+    var studentsLocation : [StudentLocation] = [StudentLocation]()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
