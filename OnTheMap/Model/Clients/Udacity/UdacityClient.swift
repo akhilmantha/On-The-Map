@@ -17,6 +17,7 @@ class UdacityClient : NSObject {
     
     // authentication state
     var requestToken: String? = nil
+    var udacitySession : UdacitySession? = nil
     
     // Session struct
     struct UdacitySession {
@@ -66,6 +67,37 @@ class UdacityClient : NSObject {
         task.resume()
         return task
         
+    }
+    
+    //Mark: Delete
+    
+    func taskForDeleteMethod(_ method: String, parameters: [string: AnyObject], completionHandlerForDelelte: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
+        
+        //Build and configure the request
+        
+        let request = NSMutableURLRequest(url: urlFromParameters(parameters, withPathExtension: method, api: .Udacity))
+        request.httpMethod = "DELETE"
+        var xsrfCookie : HTTPCookie? = nil
+        let sharedCookieStorage = HTTPCookieStorage.shared
+        for cookie in sharedCookieStorage.cookies! {
+            if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie}
+        }
+        if let xsrfCookie = xsrfCookie {
+            request.setValue(xsrfCookie.value, forHTTPHeaderField: "X-XSRF-TOKEN")
+        }
+        let session = URLSession.shared
+        
+        //Make the request
+        
+        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+            guard let usefulData = self.getUsefulData(domain: "taskForDeleteMethod", request: request as URLRequest, data: data, response: response, error: error as NSError?, completionaHandler: completionHandlerForDelelte) else {
+                return
+            }
+            convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForDelelte)
+        }
+        //start the request
+        task.resume()
+        return task
     }
     
     
