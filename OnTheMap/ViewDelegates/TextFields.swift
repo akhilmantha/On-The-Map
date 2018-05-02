@@ -22,12 +22,30 @@ extension UIViewController: UITextFieldDelegate {
     func getViewShift(notification: Notification) -> CGFloat {
         let userInfo = notification.userInfo!
         let keyboardSize = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height - 88.0
     }
     
+    @objc func keyboardWillShow(_ notification: Notification) {
+        view.frame.origin.y = -getViewShift(notification: notification)
+    }
+    @objc func keyboardWillHide(_ notification : Notification){
+        
+        view.frame.origin.y = 0
+    }
+    //Mark: Notifications
     
+    func subscribeToKeyboardNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+    }
     
+    func unsubscribeToKeyboardNotifications(){
+        NotificationCenter.default.removeObserver(self)
+    }
     
-    
-    
-    
+    public func resignIfFirstResponder() -> Bool {
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+    }
 }
