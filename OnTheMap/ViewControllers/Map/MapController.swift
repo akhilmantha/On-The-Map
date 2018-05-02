@@ -8,18 +8,25 @@
 
 import MapKit
 
-class MapController: UIViewController {
+class MapController : UIViewController, RefreshData {
     
     @IBOutlet var mapView: MKMapView!
-    var studentsLocation : [StudentLocation] = [StudentLocation]()
-
+    var studentsLocations: [StudentLocation] = [StudentLocation]()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        performUIUpdatesOnMain{
+        performUIUpdatesOnMain {
             self.refresh()
         }
+        
     }
-
-
+    
+    // MARK: RefreshData
+    func refresh() {
+        studentsLocations = StudentModel.sharedInstance.studentsLocations
+        performUIUpdatesOnMain {
+            self.updateStudentLocationsInMap()
+        }
+    }
+    
 }
-

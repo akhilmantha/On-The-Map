@@ -11,7 +11,7 @@ import UIKit
 
 let errorString = "Invalid Link"
 
-func openUrlInsafari (urlString: String?, viewController: UIViewController) {
+func openUrlInSafari (urlString: String?, viewController: UIViewController) {
     let app = UIApplication.shared
     
     guard let urlString = urlString,
