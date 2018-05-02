@@ -35,6 +35,7 @@
 		6AB39BA0209A3AF000291EDB /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39B9F209A3AF000291EDB /* AddLocationController.swift */; };
 		6AB39BA2209A3BAA00291EDB /* AddLocationMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39BA1209A3BAA00291EDB /* AddLocationMapController.swift */; };
 		6AB39BA4209A3D6100291EDB /* MapAndTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39BA3209A3D6100291EDB /* MapAndTableController.swift */; };
+		6AB39BA6209A3E4A00291EDB /* TableController+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39BA5209A3E4A00291EDB /* TableController+TableDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		6AB39B9F209A3AF000291EDB /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
 		6AB39BA1209A3BAA00291EDB /* AddLocationMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationMapController.swift; sourceTree = "<group>"; };
 		6AB39BA3209A3D6100291EDB /* MapAndTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndTableController.swift; sourceTree = "<group>"; };
+		6AB39BA5209A3E4A00291EDB /* TableController+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableController+TableDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB39B9D2099D03700291EDB /* TableController.swift */,
+				6AB39BA5209A3E4A00291EDB /* TableController+TableDelegate.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				6AB39B982099AEE000291EDB /* Alerts.swift in Sources */,
 				6AB39B9E2099D03700291EDB /* TableController.swift in Sources */,
 				6AB30A0D2093D2FD009CE32F /* StudentModel.swift in Sources */,
+				6AB39BA6209A3E4A00291EDB /* TableController+TableDelegate.swift in Sources */,
 				6AB39B9A2099B66000291EDB /* GeocodingUtils.swift in Sources */,
 				6AB30A0420939AFC009CE32F /* GCDBlackBox.swift in Sources */,
 				6AB39B9C2099C48F00291EDB /* TextFields.swift in Sources */,
