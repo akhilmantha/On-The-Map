@@ -32,6 +32,7 @@
 		6AB39B9A2099B66000291EDB /* GeocodingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39B992099B66000291EDB /* GeocodingUtils.swift */; };
 		6AB39B9C2099C48F00291EDB /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39B9B2099C48F00291EDB /* TextFields.swift */; };
 		6AB39B9E2099D03700291EDB /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39B9D2099D03700291EDB /* TableController.swift */; };
+		6AB39BA0209A3AF000291EDB /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB39B9F209A3AF000291EDB /* AddLocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		6AB39B992099B66000291EDB /* GeocodingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingUtils.swift; sourceTree = "<group>"; };
 		6AB39B9B2099C48F00291EDB /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		6AB39B9D2099D03700291EDB /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		6AB39B9F209A3AF000291EDB /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB39B9D2099D03700291EDB /* TableController.swift */,
+				6AB39B9F209A3AF000291EDB /* AddLocationController.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				6A5803E120950CF0003E15C3 /* RequestUtils.swift in Sources */,
 				6AB30A0220939835009CE32F /* MapController+MapDelegate.swift in Sources */,
 				6AB39B942099AA8B00291EDB /* UdacityConvenience.swift in Sources */,
+				6AB39BA0209A3AF000291EDB /* AddLocationController.swift in Sources */,
 				6AB39B922099A4BA00291EDB /* UdacityClientUtils.swift in Sources */,
 				6A433C3B209076A7003EF463 /* MapController.swift in Sources */,
 				6AB30A062093C55C009CE32F /* LoginViewController.swift in Sources */,
