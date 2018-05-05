@@ -51,7 +51,7 @@ class AddLocationMapController: UIViewController {
             let latitude = updatedLocation.location.coordinate.latitude
             let longitude = updatedLocation.location.coordinate.longitude
             
-            ParseClient.sharedInstance().updateStudentLocation(
+            ParseClient.sharedInstance().update(
                 objectId: objectId, uniqueKey: uniquekey,
                 firstName: firstName ,lastName: lastName,
                 mapString: mapString, mediaURL: mediaURL,

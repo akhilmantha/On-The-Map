@@ -71,7 +71,7 @@ class UdacityClient : NSObject {
     
     //Mark: Delete
     
-    func taskForDeleteMethod(_ method: String, parameters: [string: AnyObject], completionHandlerForDelelte: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
+    func taskForDeleteMethod(_ method: String, parameters: [String: AnyObject], completionHandlerForDelelte: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
         
         //Build and configure the request
         
