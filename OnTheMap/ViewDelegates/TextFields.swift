@@ -43,7 +43,7 @@ extension UIViewController: UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
-    public func resignIfFirstResponder() -> Bool {
+    public func resignIfFirstResponder(_ textField: UITextField) {
         if textField.isFirstResponder {
             textField.resignFirstResponder()
         }

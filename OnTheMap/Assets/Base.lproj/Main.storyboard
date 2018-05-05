@@ -54,6 +54,9 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qa9-sc-6c9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -75,6 +78,9 @@
                                 <state key="normal" title="Don't have an account? Sign Up">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ge-IH-wgr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,6 +94,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="7v8-a3-TRP" id="GR8-ed-Lx0"/>
+                        <outlet property="loginButton" destination="k7J-3c-6Jc" id="KJn-im-m5N"/>
+                        <outlet property="passwordTextField" destination="AAX-NY-ZOa" id="Eeo-lM-nVT"/>
+                        <outlet property="signUpButton" destination="Kea-3H-Buq" id="roh-s7-2B2"/>
+                        <outlet property="stackView" destination="kZO-uV-V8j" id="ert-ws-XsQ"/>
+                        <outlet property="userNameTextField" destination="gvZ-Vf-1Pq" id="orn-RS-TFo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
