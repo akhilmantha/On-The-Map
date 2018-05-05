@@ -93,6 +93,9 @@
                             <constraint firstItem="kZO-uV-V8j" firstAttribute="leading" secondItem="Kea-3H-Buq" secondAttribute="leading" id="zra-Ie-WFn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4bh-xH-tHT" appends="YES" id="TmC-DD-Wya"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="7v8-a3-TRP" id="GR8-ed-Lx0"/>
@@ -104,6 +107,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4bh-xH-tHT"/>
             </objects>
             <point key="canvasLocation" x="138.75" y="133.09859154929578"/>
         </scene>
