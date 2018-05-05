@@ -6,14 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLocationController" title="Add Location" id="BYZ-38-t0r" customClass="AddLocationController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,11 +306,21 @@
             </objects>
             <point key="canvasLocation" x="2523.75" y="-207.04225352112675"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Map And Table Controller-->
         <scene sceneID="aaO-h9-Khl">
             <objects>
-                <tabBarController id="yJ3-00-yLN" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9Su-RZ-cgr"/>
+                <tabBarController title="Map And Table Controller" id="yJ3-00-yLN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9Su-RZ-cgr">
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="BZj-dK-xDi"/>
+                        <rightBarButtonItems>
+                            <barButtonItem image="Add" id="h82-hF-JZC" userLabel="Add Button">
+                                <color key="tintColor" red="0.2559407225" green="0.70982234340000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="Refresh" id="t2a-0a-5Hj" userLabel="Refresh Button">
+                                <color key="tintColor" red="0.2559407225" green="0.70982234340000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aHP-eo-Ry1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -326,10 +337,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="24" height="24"/>
         <image name="List View" width="75" height="50"/>
         <image name="Logo" width="62" height="62"/>
         <image name="Map view" width="75" height="50"/>
         <image name="Pin" width="24" height="24"/>
+        <image name="Refresh" width="24" height="24"/>
         <image name="World" width="52" height="67"/>
     </resources>
 </document>
