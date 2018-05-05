@@ -14,7 +14,7 @@
         <!--Add Location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AddLocationController" title="Add Location" id="BYZ-38-t0r" customClass="AddLocationController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLocationController" title="Add Location" id="BYZ-38-t0r" customClass="LoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,15 +309,25 @@
         <!--Map And Table Controller-->
         <scene sceneID="aaO-h9-Khl">
             <objects>
-                <tabBarController title="Map And Table Controller" id="yJ3-00-yLN" sceneMemberID="viewController">
+                <tabBarController title="Map And Table Controller" id="yJ3-00-yLN" customClass="MapAndTableController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9Su-RZ-cgr">
-                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="BZj-dK-xDi"/>
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="BZj-dK-xDi">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="yJ3-00-yLN" id="Qmo-ZK-KKO"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="Add" id="h82-hF-JZC" userLabel="Add Button">
                                 <color key="tintColor" red="0.2559407225" green="0.70982234340000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="yJ3-00-yLN" id="azp-sD-ZWY"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="Refresh" id="t2a-0a-5Hj" userLabel="Refresh Button">
                                 <color key="tintColor" red="0.2559407225" green="0.70982234340000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="yJ3-00-yLN" id="olk-lb-ufR"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -327,6 +337,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="addButton" destination="h82-hF-JZC" id="tiL-S8-2xo"/>
+                        <outlet property="logoutButton" destination="BZj-dK-xDi" id="p8V-pj-dsf"/>
+                        <outlet property="refreshButton" destination="t2a-0a-5Hj" id="3NX-VS-LRZ"/>
                         <segue destination="lPn-rl-V0i" kind="relationship" relationship="viewControllers" id="iNu-zS-OGP"/>
                         <segue destination="Qiv-XJ-kEE" kind="relationship" relationship="viewControllers" id="ADW-hD-kuh"/>
                     </connections>
