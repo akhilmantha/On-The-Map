@@ -187,7 +187,7 @@
         <!--Add Location-->
         <scene sceneID="2pe-wW-3JS">
             <objects>
-                <viewController title="Add Location" id="JoP-0p-klx" sceneMemberID="viewController">
+                <viewController title="Add Location" id="JoP-0p-klx" customClass="AddLocationController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="so2-Ch-Zn6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KhH-4l-T3H">
                                         <rect key="frame" x="35" y="110" width="250" height="110"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-bf-6aL">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-bf-6aL">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="98s-1O-1rx"/>
@@ -213,7 +213,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qde-uQ-7cm">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qde-uQ-7cm">
                                                 <rect key="frame" x="0.0" y="40" width="250" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="oZg-WU-mo4"/>
@@ -228,6 +228,9 @@
                                                 <state key="normal" title="Find Location">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="findLocationButtonPressed:" destination="JoP-0p-klx" eventType="touchUpInside" id="5IO-CL-4QX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -253,8 +256,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1c0-wr-5NZ"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="bd5-1Y-T4F" id="NdP-0v-1Q7"/>
+                        <outlet property="findLocationButton" destination="TPN-Bp-EhD" id="5Fk-9t-p5l"/>
+                        <outlet property="locationTextField" destination="PKT-bf-6aL" id="t2V-G5-JBB"/>
+                        <outlet property="stackView" destination="KhH-4l-T3H" id="Gna-JO-RYI"/>
+                        <outlet property="websiteTextField" destination="qde-uQ-7cm" id="bh0-Sz-zYT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ke4-Fi-K58" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ymn-Bx-Rr7">
+                    <connections>
+                        <action selector="userDidTapView:" destination="JoP-0p-klx" id="Ghw-jo-ic1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1642.5" y="844.0140845070423"/>
         </scene>

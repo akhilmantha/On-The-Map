@@ -46,7 +46,9 @@ class UdacityClient : NSObject {
     override  init(){
         super.init()
     }
-    func taskForPostMethod(_ method: String, parameters: [String: AnyObject], jsonBody: Data,completionHandlerForPost: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
+    
+    //Mark: POST
+    func taskForPOSTMethod(_ method: String, parameters: [String: AnyObject], jsonBody: Data,completionHandlerForPOST: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
         
         //Build the URL & Configure the request
         var request = URLRequest(url: urlFromParameters(parameters, withPathExtension: method, api: .Udacity))
@@ -58,10 +60,10 @@ class UdacityClient : NSObject {
         //Make the request
         let task = session.dataTask(with: request as URLRequest){ (data, response, error) in
             
-            guard let usefulData = self.getUsefulData(domain: "taskForPostMethod", request: request as URLRequest, data: data, response: response, error: error as NSError?, completionaHandler: completionHandlerForPost) else {
+            guard let usefulData = self.getUsefulData(domain: "taskForPOSTMethod", request: request as URLRequest, data: data, response: response, error: error as NSError?, completionaHandler: completionHandlerForPOST) else {
                 return
             }
-            convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForPost)
+            convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForPOST)
         }
         //start the request
         task.resume()
