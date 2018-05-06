@@ -276,7 +276,7 @@
         <!--Add Location-->
         <scene sceneID="hkl-2l-GCO">
             <objects>
-                <viewController title="Add Location" id="ZCI-nK-8qL" sceneMemberID="viewController">
+                <viewController title="Add Location" id="ZCI-nK-8qL" customClass="AddLocationMapController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTD-DE-MK8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,6 +291,9 @@
                                 <state key="normal" title="Finish ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="finishButtonPressed:" destination="ZCI-nK-8qL" eventType="touchUpInside" id="7PO-wE-PoY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -302,6 +305,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NfB-0Z-DGL"/>
                     </view>
+                    <connections>
+                        <outlet property="finishButton" destination="ZTf-bC-IBc" id="kEh-aw-EJ4"/>
+                        <outlet property="mapView" destination="fkd-bq-LR8" id="LaQ-rr-4L3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmI-Gg-gr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
