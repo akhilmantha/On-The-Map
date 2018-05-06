@@ -80,7 +80,7 @@ extension ParseClient {
         let jsonBody = newLocationJson(uniqueKey: uniqueKey, firstName: firstName, lastName: lastName, mapString: mapString, mediaURL: mediaURL, location: location)
         
         /* Make the request */
-        let _ = taskForPOSTMethod(method, parameters: parameters, jsonBody: jsonBody) { (results, error) in
+        let _ = taskForPUTMethod(method, parameters: parameters, jsonBody: jsonBody) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {

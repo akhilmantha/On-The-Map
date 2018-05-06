@@ -24,7 +24,7 @@ extension UdacityClient {
         let jsonBody = jsonFromDictionary(jsonDictionary)
         
         /* Make the request */
-        let _ = taskForPostMethod(method, parameters: parameters, jsonBody: jsonBody) { (results, error) in
+        let _ = taskForPOSTMethod(method, parameters: parameters, jsonBody: jsonBody) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
