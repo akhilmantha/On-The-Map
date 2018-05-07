@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 enum Api: Int {
     case Udacity
     case Parse
