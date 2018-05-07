@@ -10,89 +10,116 @@ import Foundation
 
 class ParseClient : NSObject {
     
-    
-    //Mark: Properties
-    //Mark: shared session
-    
+    // MARK: Properties
+    // shared session
     var session = URLSession.shared
     
-    //Mark: Initializers
-    
+    // MARK: Initializers
     override init() {
         super.init()
     }
     
-    //Mark: Header
-    
-    func addParseHeader(request: URLRequest) -> URLRequest {
+    // MARK: Header
+    func addParseHeader (request: URLRequest) -> URLRequest {
         var requestWithHeader = request
         requestWithHeader.addValue(ParseClient.HeaderKeys.ApplicationID, forHTTPHeaderField: "X-Parse-Application-Id")
-        requestWithHeader.addValue(ParseClient.HeaderKeys.ApiKey, forHTTPHeaderField: "X-Parse-API-Key")
+        requestWithHeader.addValue(ParseClient.HeaderKeys.ApiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
         
         return requestWithHeader
     }
     
-    func addPostOrPutParseHeader (request: URLRequest) -> URLRequest{
+    func addPostOrPutParseHeader (request: URLRequest) -> URLRequest {
         var requestWithHeader = addParseHeader(request: request)
         requestWithHeader.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         return requestWithHeader
     }
     
-    //Mark: GET
-    
-    func taskForGETMethod(_ method:String, parameters:[String:AnyObject], completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+    // MARK: GET
+    func taskForGETMethod(_ method: String, parameters: [String:AnyObject], completionHandlerForGET: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
         
-        //Build the URL, configure the request
-        let request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], withPathExtension: method, api: .Parse))
+        /* Build the URL, Configure the request */
+        let request = URLRequest(url: urlFromParameters(parameters as [String:AnyObject], withPathExtension: method, api: .Parse))
         
-        //add request header
-        let requestWithHeader =  addParseHeader(request: request)
+        /* Add header */
+        let requestWithHeader = addParseHeader(request: request)
         
-        //Make a request
+        /* Make the request */
         let task = session.dataTask(with: requestWithHeader) { (data, response, error) in
             
-            guard let usefulData = getData(domain: "taskForGETMethod", request: requestWithHeader as URLRequest, data: data , response: response, error: error as NSError?, completionHandler: completionHandlerForGET) else {
+            guard let usefulData = getData(domain: "taskForGETMethod", request: requestWithHeader as URLRequest, data: data, response: response, error: error as NSError?, completionHandler: completionHandlerForGET) else {
                 return
             }
             convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForGET)
         }
-        //start the task
+        
+        /* Start the request */
         task.resume()
         
         return task
     }
     
-    //Mark: PUT
-    
-    func taskForPUTMethod(_ method: String, parameters: [String: AnyObject], jsonBody: String, completionHandlerForPUT: @escaping(_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask{
+    // MARK: POST
+    func taskForPOSTMethod(_ method: String, parameters: [String:AnyObject], jsonBody: String, completionHandlerForPOST: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
         
-        //build the url, configure the request
-        let request = URLRequest(url: urlFromParameters(parameters as [String: AnyObject], withPathExtension: method, api: .Parse))
+        /* Build the URL, Configure the request */
+        let request = URLRequest(url: urlFromParameters(parameters as [String:AnyObject], withPathExtension: method, api: .Parse))
         
-        //add header and http mathods
+        /* Add header and http method*/
+        var requestWithHeader = addPostOrPutParseHeader (request: request)
+        requestWithHeader.httpMethod = "POST"
         
-        var requestWithHeader = addPostOrPutParseHeader(request: request)
-        requestWithHeader.httpMethod = "PUT"
-        
-        //Configure the header
+        /* Configure the body */
         requestWithHeader.httpBody = jsonBody.data(using: String.Encoding.utf8)
         
-        //Make the request
+        /* Make the request */
         let task = session.dataTask(with: requestWithHeader) { (data, response, error) in
             
-            guard let usefulData = getData(domain: "taskForPUTMethod", request: requestWithHeader as URLRequest, data: data , response: response, error: error as NSError?, completionHandler: completionHandlerForPUT) else {
+            guard let usefulData = getData(domain: "taskForPOSTMethod", request: requestWithHeader as URLRequest, data: data, response: response, error: error as NSError?, completionHandler: completionHandlerForPOST) else {
+                return
+            }
+            convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForPOST)
+        }
+        
+        /* Start the request */
+        task.resume()
+        
+        return task
+    }
+    
+    
+    // MARK: PUT
+    func taskForPUTMethod(_ method: String, parameters: [String:AnyObject], jsonBody: String, completionHandlerForPUT: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+        
+        /* Build the URL, Configure the request */
+        let request = URLRequest(url: urlFromParameters(parameters as [String:AnyObject], withPathExtension: method, api: .Parse))
+        
+        /* Add header and http method*/
+        var requestWithHeader = addPostOrPutParseHeader (request: request)
+        requestWithHeader.httpMethod = "PUT"
+        
+        /* Configure the header */
+        requestWithHeader.httpBody = jsonBody.data(using: String.Encoding.utf8)
+        
+        /* Make the request */
+        let task = session.dataTask(with: requestWithHeader) { (data, response, error) in
+            
+            guard let usefulData = getData(domain: "taskForPUTMethod", request: requestWithHeader as URLRequest, data: data, response: response, error: error as NSError?, completionHandler: completionHandlerForPUT) else {
                 return
             }
             convertDataWithCompletionHandler(usefulData, completionHandlerForConvertData: completionHandlerForPUT)
         }
-        //start the task
+        
+        /* Start the request */
         task.resume()
+        
         return task
     }
     
-    //Mark: Shared Instance
+    
+    // MARK: Shared Instance
     class func sharedInstance() -> ParseClient {
-        struct Singleton{
+        struct Singleton {
             static var sharedInstance = ParseClient()
         }
         return Singleton.sharedInstance

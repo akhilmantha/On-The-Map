@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 extension UdacityClient {
     
     
@@ -84,7 +85,7 @@ extension UdacityClient {
         let method = UdacityClient.Methods.Session
         
         /* Make the request */
-        let _ = taskForDeleteMethod(method, parameters: parameters) { (results, error) in
+        let _ = taskForDELETEMethod(method, parameters: parameters) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
