@@ -14,7 +14,7 @@
         <!--Add Location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AddLocationController" title="Add Location" id="BYZ-38-t0r" customClass="LoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Location" id="BYZ-38-t0r" customClass="LoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RCb-lk-reD">
             <objects>
-                <navigationController id="GlQ-uU-JBo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapAndTableTabbedView" id="GlQ-uU-JBo" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zbf-4C-HjL">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -187,7 +187,7 @@
         <!--Add Location-->
         <scene sceneID="2pe-wW-3JS">
             <objects>
-                <viewController title="Add Location" id="JoP-0p-klx" customClass="AddLocationController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLocationController" title="Add Location" id="JoP-0p-klx" customClass="AddLocationController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="so2-Ch-Zn6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +276,7 @@
         <!--Add Location-->
         <scene sceneID="hkl-2l-GCO">
             <objects>
-                <viewController title="Add Location" id="ZCI-nK-8qL" customClass="AddLocationMapController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLocationMapController" title="Add Location" id="ZCI-nK-8qL" customClass="AddLocationMapController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTD-DE-MK8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
