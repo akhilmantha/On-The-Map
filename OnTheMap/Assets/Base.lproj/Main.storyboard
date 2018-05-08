@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Location-->
+        <!--Login VIew Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Add Location" id="BYZ-38-t0r" customClass="LoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login VIew Controller" id="BYZ-38-t0r" customClass="LoginViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4bh-xH-tHT"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="133.09859154929578"/>
+            <point key="canvasLocation" x="150" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCb-lk-reD">
@@ -125,12 +125,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8V-M9-Lcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="133"/>
+            <point key="canvasLocation" x="878" y="132"/>
         </scene>
-        <!--Item 2-->
+        <!--TableController-->
         <scene sceneID="xsw-i3-RKJ">
             <objects>
-                <viewController id="Qiv-XJ-kEE" customClass="TableController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TableController" id="Qiv-XJ-kEE" customClass="TableController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Slh-wb-SWr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
