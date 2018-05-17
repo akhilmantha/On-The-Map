@@ -17,6 +17,7 @@
 		6A5803E120950CF0003E15C3 /* RequestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5803E020950CF0003E15C3 /* RequestUtils.swift */; };
 		6A5803E32095B7A0003E15C3 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5803E22095B7A0003E15C3 /* DateUtils.swift */; };
 		6A5803E52095F550003E15C3 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5803E42095F550003E15C3 /* UdacityClient.swift */; };
+		6A7DC66420AD9239007CFA4F /* ClearCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7DC66320AD9239007CFA4F /* ClearCookies.swift */; };
 		6AB30A0220939835009CE32F /* MapController+MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A0120939835009CE32F /* MapController+MapDelegate.swift */; };
 		6AB30A0420939AFC009CE32F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A0320939AFC009CE32F /* GCDBlackBox.swift */; };
 		6AB30A062093C55C009CE32F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB30A052093C55C009CE32F /* LoginViewController.swift */; };
@@ -53,6 +54,7 @@
 		6A5803E020950CF0003E15C3 /* RequestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtils.swift; sourceTree = "<group>"; };
 		6A5803E22095B7A0003E15C3 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		6A5803E42095F550003E15C3 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
+		6A7DC66320AD9239007CFA4F /* ClearCookies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCookies.swift; sourceTree = "<group>"; };
 		6AB30A0120939835009CE32F /* MapController+MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapController+MapDelegate.swift"; sourceTree = "<group>"; };
 		6AB30A0320939AFC009CE32F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		6AB30A052093C55C009CE32F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				6A5803E22095B7A0003E15C3 /* DateUtils.swift */,
 				6AB39B952099ADED00291EDB /* UrlUtils.swift */,
 				6AB39B992099B66000291EDB /* GeocodingUtils.swift */,
+				6A7DC66320AD9239007CFA4F /* ClearCookies.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				6AB39B9C2099C48F00291EDB /* TextFields.swift in Sources */,
 				6AB39BA4209A3D6100291EDB /* MapAndTableController.swift in Sources */,
 				6A5803E32095B7A0003E15C3 /* DateUtils.swift in Sources */,
+				6A7DC66420AD9239007CFA4F /* ClearCookies.swift in Sources */,
 				6A5803E120950CF0003E15C3 /* RequestUtils.swift in Sources */,
 				6AB30A0220939835009CE32F /* MapController+MapDelegate.swift in Sources */,
 				6AB39B942099AA8B00291EDB /* UdacityConvenience.swift in Sources */,

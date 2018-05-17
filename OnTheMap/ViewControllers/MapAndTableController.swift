@@ -58,6 +58,7 @@ class MapAndTableController : UITabBarController {
             }
             
             self.fetchEnds()
+            clearCookies()
         }
     }
     

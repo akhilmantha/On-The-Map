@@ -109,7 +109,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4bh-xH-tHT"/>
             </objects>
-            <point key="canvasLocation" x="150" y="132"/>
+            <point key="canvasLocation" x="201" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCb-lk-reD">
