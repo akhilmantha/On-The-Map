@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -85,6 +86,7 @@ class LoginViewController: UIViewController {
                 print ("Logged in!!")
                 self.presentMapAndTableTabbedView()
             }
+            self.getSessionId()
             self.view.removeBlurLoader()
         }
     }
