@@ -95,5 +95,7 @@ class LoginViewController: UIViewController {
     func presentMapAndTableTabbedView() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapAndTableTabbedView") as! UINavigationController
         self.present(vc, animated: true, completion: nil)
+        let vc  = self.storyboard?.instantiateInitialViewController([withidentifier: "MapAndTableTabbedView") as UINavigationController
+            self.present(vc, animated: true, completion: nil)
     }
 }
