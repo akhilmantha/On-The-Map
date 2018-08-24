@@ -11,23 +11,23 @@ import UIKit
 
 extension LoginViewController {
     
-    func styleButtons(){
+    func styleButtons() {
         loginButton.backgroundColor = UIColor.udacityBlue
         
-        let signupString = "Don't have an account? Sign up"
-        let blueRange = NSMakeRange(signupString.count - 7,7)
-        let attrStr = NSMutableAttributedString(string: signupString)
-        attrStr.addAttribute(.foregroundColor, value: UIColor.udacityBlue, range: blueRange)
+        let signUpString = "Don´t have an account? Sign Up"
+        let blueRange = NSMakeRange(signUpString.count - 7, 7)
+        let attrStr = NSMutableAttributedString(string: signUpString)
+        attrStr.addAttribute(.foregroundColor, value:UIColor.udacityBlue, range: blueRange)
+        
         signUpButton.setAttributedTitle(attrStr, for: .normal)
     }
-    
 }
 
-extension MapAndTableController{
+extension MapAndTableController {
     
-    func styleLogoutButton(){
+    func styleLogoutButton () {
         logoutButton.tintColor = UIColor.udacityBlue
-        }
+    }
 }
 
 extension TableController {
@@ -54,4 +54,3 @@ extension AddLocationMapController {
         finishButton.tintColor = UIColor.udacityBlue
     }
 }
-
