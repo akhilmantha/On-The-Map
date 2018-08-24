@@ -94,7 +94,6 @@ class AddLocationController: UIViewController {
             completeAddress += ", " + country
         }
         return completeAddress
-        
     }
     
     private func getCompleteUserName () -> String {
@@ -108,4 +107,3 @@ class AddLocationController: UIViewController {
         }
     }
 }
-

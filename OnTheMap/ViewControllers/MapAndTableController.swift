@@ -58,7 +58,6 @@ class MapAndTableController : UITabBarController {
             }
             
             self.fetchEnds()
-            clearCookies()
         }
     }
     
@@ -135,4 +134,3 @@ extension MapAndTableController: AddLocation {
         }
     }
 }
-

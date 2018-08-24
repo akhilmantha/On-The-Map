@@ -36,7 +36,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,7 +85,6 @@ class LoginViewController: UIViewController {
                 print ("Logged in!!")
                 self.presentMapAndTableTabbedView()
             }
-            self.getSessionId()
             self.view.removeBlurLoader()
         }
     }
@@ -95,7 +93,5 @@ class LoginViewController: UIViewController {
     func presentMapAndTableTabbedView() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapAndTableTabbedView") as! UINavigationController
         self.present(vc, animated: true, completion: nil)
-        let vc  = self.storyboard?.instantiateInitialViewController([withidentifier: "MapAndTableTabbedView") as UINavigationController
-            self.present(vc, animated: true, completion: nil)
     }
 }
