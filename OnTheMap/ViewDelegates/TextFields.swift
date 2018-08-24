@@ -8,38 +8,41 @@
 
 import UIKit
 
+
+// MARK: - UIViewController: UITextFieldDelegate
 extension UIViewController: UITextFieldDelegate {
     
     public struct keyboardYLimit {
         static var buttonY: CGFloat = 0.0
     }
+    
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    //Mark: keyboard
-    func getViewShift(notification: Notification) -> CGFloat {
+    // MARK: keyboard
+    func getViewYShift(notification: Notification) -> CGFloat {
         let userInfo = notification.userInfo!
-        let keyboardSize = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
+        let keyboardSize = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.cgRectValue.height - 88.0
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
-        view.frame.origin.y = -getViewShift(notification: notification)
+        view.frame.origin.y = -getViewYShift(notification: notification)
     }
-    @objc func keyboardWillHide(_ notification : Notification){
-        
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
         view.frame.origin.y = 0
     }
-    //Mark: Notifications
     
-    func subscribeToKeyboardNotifications(){
+    // MARK: notifications
+    func subscribeToKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
     
-    func unsubscribeToKeyboardNotifications(){
+    func unsubscribeToKeyboardNotifications() {
         NotificationCenter.default.removeObserver(self)
     }
     

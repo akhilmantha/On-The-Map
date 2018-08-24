@@ -9,34 +9,32 @@
 import CoreLocation
 import UIKit
 
-func getCoordinatesForAddress(address: String, vc: UIViewController, _ completionHandlerForGeocoding: @escaping(_ result: CLPlacemark?, _ error: NSError?) -> Void) {
+func getCoordinatesForAddress (address: String, vc: UIViewController,_ completionHandlerForGeocoding: @escaping (_ result: CLPlacemark?, _ error: NSError?) -> Void) {
     let geocoder: CLGeocoder = CLGeocoder()
-    geocoder.geocodeAddressString(address, completionHandler: {(geocodeResults, geocodeError) in
+    geocoder.geocodeAddressString(address, completionHandler: { (geocodeResults, geocodeError) in
         
-        //geocoder returns an error
+        // geocoding returns an error
         if let error = geocodeError {
-            let completionError = NSError(domain: "geoCoordinatesForAddress", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error getting the location"])
+            let completionError = NSError(domain: "getCoordinatesForAddress", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error getting the location"])
             completionHandlerForGeocoding(nil, completionError)
-            print("Geocoder error: \(error.localizedDescription). Address String: \(address)")
+            print ("Geocoder error: \(error.localizedDescription). Address string: \(address)")
         }
         
-        // the geocoding information is not complete
+        // the geocoding infomation is not complete
         guard let results = geocodeResults,
-          let _ = results[0].location,
-          let _ = results[0].name,
+            let _ = results[0].location,
+            let _ = results[0].name,
             let _ = results[0].country else {
-                let completionError = NSError(domain: "getCoordinatesForAddress", code: 0, userInfo: [NSLocalizedDescriptionKey: "Location not found"])
+                let completionError = NSError(domain: "getCoordinatesForAddress", code: 0, userInfo: [NSLocalizedDescriptionKey: "Location Not Found"])
                 completionHandlerForGeocoding(nil, completionError)
-                print("Geocoder error: location, address or country not found. Address \(geocodeResults ?? [CLPlacemark]())")
+                print ("Geocoder error: location, address or countru not found). Address: \(geocodeResults ?? [CLPlacemark]())")
                 return
         }
+        
+        // all we need go on!
         completionHandlerForGeocoding(results[0], nil)
-        
     })
-        
-        
-    }
-    
+}
     
     
 

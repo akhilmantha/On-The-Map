@@ -18,8 +18,9 @@ func openUrlInSafari (urlString: String?, viewController: UIViewController) {
         let url = URL(string: urlString) else {
             viewController.showSimpleAlert(text: errorString)
             return
-            }
-    if (!app.canOpenURL(url)){
+    }
+    
+    if (!app.openURL(url)) {
         viewController.showSimpleAlert(text: errorString)
     }
 }
